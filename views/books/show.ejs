@@ -34,8 +34,8 @@
                 <div class="text-right">
                         <a class="btn btn-info" href="/books/<%= book._id %>/comments/new">Add New Comment</a>
                 </div>
-                <hr>
                 <% book.comments.forEach(function(comment){ %>
+                <hr>
                 <div class="row">
                     <div class="col-md-12">
                         <strong><%= comment.author.username %></strong>
