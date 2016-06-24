@@ -72,10 +72,17 @@ router.get("/books/:id", function(req, res){
     });
 });
 
-// EDIT
+// EDIT (MAIN)
 router.get("/books/:id/edit", middleware.checkBookOwnership, function(req, res){
     Book.findById(req.params.id, function(err, book){
         res.render("books/edit", {book: book});
+    });
+});
+
+// EDIT (SIDEBAR 1)
+router.get("/books/:id/editinfo", middleware.checkBookOwnership, function(req, res){
+    Book.findById(req.params.id, function(err, book){
+        res.render("books/editinfo", {book: book});
     });
 });
 

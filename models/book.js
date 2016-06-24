@@ -5,6 +5,9 @@ var bookSchema = new mongoose.Schema({
    image: String,
    description: String,
    author: String,
+   pages: Number,
+   publisher: String,
+   ISBN: String,
    postedBy: {
       id: {
          type: mongoose.Schema.Types.ObjectId,
@@ -16,6 +19,12 @@ var bookSchema = new mongoose.Schema({
       {
          type: mongoose.Schema.Types.ObjectId,
          ref: "Comment"
+      }
+   ],
+   purchaseOptions: [
+      {
+         name: String,
+         url: String,
       }
    ]
 });
