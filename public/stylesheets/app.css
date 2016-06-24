@@ -1,0 +1,33 @@
+.thumbnail img {
+    width: 100%;
+}
+
+.thumbnail {
+    padding: 0;
+}
+
+.thumbnail .caption-full {
+    padding: 9px;
+}
+
+#deleteform {
+    display: inline;
+}
+
+#deletecommentbutton {
+    display: inline;
+}
+
+.form-group {
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#centered {
+    text-align: center;
+}
+
+.page-header {
+    margin-top: 5px;
+}

@@ -1,0 +1,31 @@
+<% include ../partials/header %>
+
+<div class="container">
+    <div class="row">
+        <h1 style="text-align: center">Add New Book</h1>
+        
+        <div style="margin: 20px auto">
+            <form action="/books/<%= book._id %>?_method=PUT" method="POST">
+                <div class="form-group">
+                    <input class="form-control" type="text" name="book[name]" placeholder="name" value="<%= book.name %>"></input>
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="text" name="book[author]" placeholder="author" value="<%= book.author %>"></input>
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="text" name="book[image]" placeholder="image url" value="<%= book.image %>"></input>
+                </div>
+                <div class="form-group">
+                    <textarea class="form-control" name="book[description]" rows="10" cols="50" placeholder="description"><%= book.description %></textarea>
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-lg btn-primary btn-block">Submit</button>
+                </div>
+            </form>
+            <p style="text-align: center"><a href="/books">Back</a></p>
+        </div>
+    </div>
+</div>
+
+
+<% include ../partials/footer %>
